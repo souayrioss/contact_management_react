@@ -9,7 +9,6 @@ const SupprimerContact = ({ supprimerContact, contacts }) => {
     const contactExistant = contacts.find((contact) => contact.nom === nom);
 
     if (contactExistant) {
-      // Open the confirmation modal
       setConfirmationModalOpen(true);
     } else {
       alert(`Aucun contact trouvé avec le nom ${nom}.`);
@@ -17,13 +16,11 @@ const SupprimerContact = ({ supprimerContact, contacts }) => {
   };
 
   const handleConfirmDelete = () => {
-    // Close the confirmation modal and perform the delete action
     setConfirmationModalOpen(false);
     supprimerContact(nom);
   };
 
   const closeModal = () => {
-    // Close the confirmation modal without performing the delete action
     setConfirmationModalOpen(false);
   };
 
