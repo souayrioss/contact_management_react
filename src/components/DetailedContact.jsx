@@ -9,13 +9,10 @@ const DetailedContact = ({ match, contacts, onDeleteContact }) => {
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
 
   const handleDelete = () => {
-    // Call the onDeleteContact function with the contact name
     onDeleteContact(nomContact);
 
     // Redirect to the "AfficherContacts" page after deletion
     history.push('/contacts');
-
-    // Close the modal after deletion
     setShowDeleteConfirmation(false);
   };
 
