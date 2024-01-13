@@ -9,16 +9,11 @@ const App = () => {
   const [contacts, setContacts] = useState([]);
 
   const ajouterContact = (nouveauContact, estMiseAJour) => {
-    // Implement your logic to add or update the contact in the state
-    // ...
 
     setContacts([...contacts, nouveauContact]);
   };
 
   const onDeleteContact = (nomContact) => {
-    // Implement your logic to remove the contact from the state
-    // ...
-
     const updatedContacts = contacts.filter((contact) => contact.nom !== nomContact);
     setContacts(updatedContacts);
   };
