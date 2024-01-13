@@ -14,22 +14,18 @@ const AjoutContact = ({ onAjouterContact }) => {
       return;
     }
 
-    // Create a new contact object
     const nouveauContact = {
       nom,
       telephone,
       email,
     };
 
-    // Invoke the onAjouterContact function passed as a prop
     onAjouterContact(nouveauContact);
 
-    // Reset form fields
     setNom('');
     setTelephone('');
     setEmail('');
 
-    // Redirect to the "AfficherContacts" page
     history.push('/contacts');
   };
 
